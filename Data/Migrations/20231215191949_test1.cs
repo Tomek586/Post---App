@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Data.Migrations
 {
     /// <inheritdoc />
-    public partial class test : Migration
+    public partial class test1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -199,15 +199,15 @@ namespace Data.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "322b9eb6-f945-4a81-9890-78a3308ad7fe", "322b9eb6-f945-4a81-9890-78a3308ad7fe", "admin", "ADMIN" });
+                values: new object[] { "c9a79090-295f-4303-bf34-48f1f5846f1f", "c9a79090-295f-4303-bf34-48f1f5846f1f", "admin", "ADMIN" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "03bcdb56-6dde-4ba2-a7fc-0ca8111d5b4d", 0, "acc468c0-4e6e-4731-ac99-da731513b2c2", "tomek@gmail.com", true, false, null, "TOMEK@GMAIL.COM", "TOMEK", "AQAAAAIAAYagAAAAEJWqHsl+WCURyO1FeLLFrz/5h9PLw1LRyYdWXHjnVNFsxYmqIqR90UM8f107zSZpYg==", null, false, "3a0562ee-c69a-48ef-8a5c-721b090d9665", false, "tomek" },
-                    { "b01adbe5-a710-4df8-a00b-40ea48feaed8", 0, "ced311fd-8854-4992-97c1-d23f57ac4fd0", "jacek@gmail.com", true, false, null, "JACEK@GMAIL.COM", "JACEK", "AQAAAAIAAYagAAAAEPY6504XtGfYkw32rd+aK1FPrOtEYvcE1r/Uj/5VHBz+c0HJcm2+Yqp0R0ljAlEkYg==", null, false, "ad73c659-834e-4d3c-a3e8-2e0867edaf51", false, "jacek" }
+                    { "312c0a79-0112-4672-803a-5e459d2d8f3e", 0, "ddd59461-f3ff-4ca4-8cfa-7fb03aa66544", "tomek@gmail.com", true, false, null, "TOMEK@GMAIL.COM", "TOMEK", "AQAAAAIAAYagAAAAEPff5W3E17o6x48NIdgn2qZWDEb+0AJgz6XecCuZs/oNK8u1wgztQ9yC5PYmQ8TBAQ==", null, false, "df7aaf4c-8173-4b1c-9b5b-764e2587435d", false, "tomek" },
+                    { "4318cab1-bd2b-430f-b2f3-c7532525ecd9", 0, "9395f077-521d-42f6-850e-2125bc3f53d5", "jacek@gmail.com", true, false, null, "JACEK@GMAIL.COM", "JACEK", "AQAAAAIAAYagAAAAEE5c7m30f3kibyKc+iJ0R3KV3KsMmsk1aArJE+69wFDPAonKb5bWE7zffdS03vdHlg==", null, false, "af8f04dd-fb32-432e-87a5-3de88e5ec736", false, "jacek" }
                 });
 
             migrationBuilder.InsertData(
@@ -222,7 +222,7 @@ namespace Data.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
                 columns: new[] { "RoleId", "UserId" },
-                values: new object[] { "322b9eb6-f945-4a81-9890-78a3308ad7fe", "b01adbe5-a710-4df8-a00b-40ea48feaed8" });
+                values: new object[] { "c9a79090-295f-4303-bf34-48f1f5846f1f", "4318cab1-bd2b-430f-b2f3-c7532525ecd9" });
 
             migrationBuilder.InsertData(
                 table: "Posts",
