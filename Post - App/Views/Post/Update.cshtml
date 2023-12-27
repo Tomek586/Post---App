@@ -1,5 +1,48 @@
-﻿@*
+﻿@model Post
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 }
+<div class="container mt-5">
+    <h2>edit a New Post</h2>
+    <form asp-controller="Post" asp-action="Update" method="post">
+        <!-- Zawartość posta -->
+        <div class="form-group">
+            <label for="Content">Content:</label>
+            <textarea class="form-control" id="Content" name="Content" rows="5" required>@Model.Content</textarea>
+        </div>
+
+        <!-- Autor posta -->
+        <div class="form-group">
+            <label for="Author">Author:</label>
+            <input type="text" class="form-control" id="Author" name="Author" required value="@Model.Author">
+        </div>
+
+        <!-- Data publikacji -->
+        <div class="form-group">
+            <label for="publishDate">Publish Date:</label>
+            <input type="date" class="form-control" id="publishDate" name="publishDate" required value="@Model.publishDate.ToString("yyyy-MM-dd")">
+        </div>
+
+        <!-- Tagi posta -->
+        <div class="form-group">
+            <label for="Tags">Tags:</label>
+            <input type="text" class="form-control" id="Tags" name="Tags" value="@Model.Tags">
+        </div>
+
+        <!-- Komentarz -->
+        <div class="form-group">
+            <label for="Comment">Comment:</label>
+            <textarea class="form-control" id="Comment" name="Comment" rows="3">@Model.Comment</textarea>
+        </div>
+
+        <!-- Tematyka posta -->
+        <div class="form-group">
+            <label asp-for="TopicId">Topic</label>
+            <select class="form-control" asp-for="TopicId" asp-items=@Model.Topics></select>
+        </div>
+
+        <button type="submit">Zapisz</button>
+    </form>
+</div>

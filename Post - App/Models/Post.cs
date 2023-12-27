@@ -15,7 +15,7 @@ namespace Post___App.Models
         public string Comment { get; set; }
 
         [HiddenInput]
-        public int TopicId { get; set; }
+        public int? TopicId { get; set; }
 
         [ValidateNever]
         public List<SelectListItem> Topics { get; set; }

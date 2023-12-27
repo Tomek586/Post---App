@@ -97,16 +97,16 @@ namespace Data
                  new TopicEntity()
                  {
                      Id = 1,
-                     Name = "WSEI",
-                     Description = "wsei krakow",
+                     Name = "Sport",
+                     Description = "piłka nożna",
 
 
                  },
                  new TopicEntity()
                  {
                      Id = 2,
-                     Name = "AGH",
-                     Description = "agh krakow",
+                     Name = "Wiadomości",
+                     Description = "sdasdasd",
 
 
                  }

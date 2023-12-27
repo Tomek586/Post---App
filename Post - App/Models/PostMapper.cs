@@ -14,7 +14,7 @@ namespace Post___App.Models
                 Tags = model.Tags,
                 Comment = model.Comment,
                 PostId = model.Id,
-                TopicId = (int)model.TopicId
+                TopicId = model.TopicId ?? 1
             };
         }
 

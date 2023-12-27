@@ -16,16 +16,25 @@
         <h2>Posts</h2>
         <div class="card-deck">
             <!-- Dynamicznie generuj karty postów na podstawie danych z modelu -->
-            @foreach (var post in @Model)
+            @foreach (var post in Model)
             {
                 <div class="card">
                     <div class="card-body">
-                       
                         <p class="card-text">@post.Content</p>
                         <p class="card-text"><small class="text-muted">Author: @post.Author</small></p>
                         <p class="card-text"><small class="text-muted">Publish Date: @post.publishDate</small></p>
                         <p class="card-text"><small class="text-muted">Tags: @post.Tags</small></p>
                         <p class="card-text"><small class="text-muted">Comment: @post.Comment</small></p>
+                        <p class="card-text"><small class="text-muted">Topic: @post.TopicId</small></p>
+
+                        <!-- Przyciski akcji -->
+                        <a class="btn btn-primary" href="@Url.Action("Details", "Post", new { id = post.Id })">Details</a>
+                        <a class="btn btn-primary"
+                           asp-action="Update"
+                           asp-controller="Post"
+                           asp-route-id=@post.Id>Edytuj</a>
+                        <a class="btn btn-danger" href="@Url.Action("Delete", "Post", new { id = post.Id })">Delete</a>
+                        <a class="btn btn-info" href="@Url.Action("AddComment", "Post", new { postId = post.Id })">Dodaj komentarz</a>
                     </div>
                 </div>
             }

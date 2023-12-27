@@ -45,6 +45,12 @@
                 <textarea class="form-control" id="Comment" name="Comment" rows="3"></textarea>
             </div>
 
+            <!-- Tematyka posta -->
+            <div class="form-group">
+                <label asp-for="TopicId">Topic</label>
+                <select class="form-control" asp-for="TopicId" asp-items=@Model.Topics></select>
+            </div>
+
             <button type="submit" class="btn btn-primary">Publish Post</button>
         </form>
     </div>

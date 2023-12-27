@@ -20,5 +20,6 @@ namespace Data.Entities
         public string Comment { get; set; }
         public int TopicId { get; set; }
         public TopicEntity? Topic { get; set; }
+        
     }
 }

@@ -1,5 +1,7 @@
 ﻿using Data;
 using Data.Entities;
+using System.Data.Entity.Infrastructure;
+
 
 namespace Post___App.Models
 {
@@ -55,15 +57,18 @@ namespace Post___App.Models
         }
 
 
-        //public PagingList<Contact> FindPage(int page, int size)
-        //{
-        //    var data = _context.Contacts
-        //        .OrderBy(c => c.Name)
-        //        .Skip((page - 1) * size)
-        //        .Take(size)
-        //        .Select(ContactMapper.FromEntity)
-        //        .ToList();
-        //    return PagingList<Contact>.Create(data, _context.Contacts.Count(), page, size);
-        //}
+        public PagingList<Post> FindPage(int page, int size)
+        {
+          var data = _context.Posts
+               .OrderBy(c => c.PostId)
+              .Skip((page - 1) * size)
+              .Take(size)
+               .Select(PostMapper.FromEntity)
+               .ToList();
+           return PagingList<Post>.Create(data, _context.Posts.Count(), page, size);
+        }
+
+
+      
     }
 }

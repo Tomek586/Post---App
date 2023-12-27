@@ -10,7 +10,8 @@ namespace Post___App.Models
         List<Post> FindAll();
         Post? FindById(int id);
         List<TopicEntity> FindAllTopics();
+        //PagingList<Post> FindPage(int page, int size);
 
-      
+
     }
 }
