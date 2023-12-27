@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231227112205_test11")]
-    partial class test11
+    [Migration("20231227144404_test1")]
+    partial class test1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -99,14 +99,14 @@ namespace Data.Migrations
                         new
                         {
                             Id = 1,
-                            Description = "wsei krakow",
-                            Name = "WSEI"
+                            Description = "piłka nożna",
+                            Name = "Sport"
                         },
                         new
                         {
                             Id = 2,
-                            Description = "agh krakow",
-                            Name = "AGH"
+                            Description = "sdasdasd",
+                            Name = "Wiadomości"
                         });
                 });
 
@@ -138,8 +138,8 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "318e8775-3d6e-435e-a35d-4815d824f664",
-                            ConcurrencyStamp = "318e8775-3d6e-435e-a35d-4815d824f664",
+                            Id = "d729e2e4-8ece-4504-8e29-51e24bc4a883",
+                            ConcurrencyStamp = "d729e2e4-8ece-4504-8e29-51e24bc4a883",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         });
@@ -234,33 +234,33 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "64724448-ab5d-4b59-8f38-d8e51ce1430e",
+                            Id = "9561df8e-8a3a-4200-bae6-c81bb72621e8",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "8a049850-f917-4274-b5d6-3e0bad0c576b",
+                            ConcurrencyStamp = "3c31851b-3b88-4162-a00b-b232c31c5021",
                             Email = "tomek@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "TOMEK@GMAIL.COM",
                             NormalizedUserName = "TOMEK",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPusSJmIc8w0hJCGkO17K0ItBUlY74oWUi+iE8lyNxLuwmOH6o89yOsrUCp3CIX+aw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPS0I60aWwb+vluSDYbjuq5jWdUAPb5YGuErNU0lUlbgPpbzsMkibO8lrsaBh5x6Jg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "0cfefd46-e0ac-418c-b293-6f5cc07a0ee5",
+                            SecurityStamp = "b3ed418a-b123-47c3-9d07-723698cb22e3",
                             TwoFactorEnabled = false,
                             UserName = "tomek"
                         },
                         new
                         {
-                            Id = "64a03d67-cc54-4031-a578-9a9f0c6a3efc",
+                            Id = "47324e96-2da2-4003-86d2-14082b81b558",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "72118a1a-fb3d-43a5-aa77-8fe9336ad8fd",
+                            ConcurrencyStamp = "3f588fe8-c0b0-4034-aeeb-36083a8f9548",
                             Email = "jacek@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "JACEK@GMAIL.COM",
                             NormalizedUserName = "JACEK",
-                            PasswordHash = "AQAAAAIAAYagAAAAEHSkk3Yag0KKbvuwXGE6Q4Jjn9dJYRSJlOqw5CAkJAEqWU1CytUsifdeNjfoV4jsgQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEL5NTDs8odReGTIN1Ij70XZbkmNrSy1VCXpWyCU+2YTJ9Xl50miDlGdHP6ELTfh62w==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "dc47ce11-6454-4965-91e3-d870fee09ff8",
+                            SecurityStamp = "4d09830e-dd14-4077-b8b4-3ea5262adb05",
                             TwoFactorEnabled = false,
                             UserName = "jacek"
                         });
@@ -328,8 +328,8 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "64a03d67-cc54-4031-a578-9a9f0c6a3efc",
-                            RoleId = "318e8775-3d6e-435e-a35d-4815d824f664"
+                            UserId = "47324e96-2da2-4003-86d2-14082b81b558",
+                            RoleId = "d729e2e4-8ece-4504-8e29-51e24bc4a883"
                         });
                 });
 

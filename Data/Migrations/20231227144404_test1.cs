@@ -199,15 +199,15 @@ namespace Data.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "c9a79090-295f-4303-bf34-48f1f5846f1f", "c9a79090-295f-4303-bf34-48f1f5846f1f", "admin", "ADMIN" });
+                values: new object[] { "d729e2e4-8ece-4504-8e29-51e24bc4a883", "d729e2e4-8ece-4504-8e29-51e24bc4a883", "admin", "ADMIN" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "312c0a79-0112-4672-803a-5e459d2d8f3e", 0, "ddd59461-f3ff-4ca4-8cfa-7fb03aa66544", "tomek@gmail.com", true, false, null, "TOMEK@GMAIL.COM", "TOMEK", "AQAAAAIAAYagAAAAEPff5W3E17o6x48NIdgn2qZWDEb+0AJgz6XecCuZs/oNK8u1wgztQ9yC5PYmQ8TBAQ==", null, false, "df7aaf4c-8173-4b1c-9b5b-764e2587435d", false, "tomek" },
-                    { "4318cab1-bd2b-430f-b2f3-c7532525ecd9", 0, "9395f077-521d-42f6-850e-2125bc3f53d5", "jacek@gmail.com", true, false, null, "JACEK@GMAIL.COM", "JACEK", "AQAAAAIAAYagAAAAEE5c7m30f3kibyKc+iJ0R3KV3KsMmsk1aArJE+69wFDPAonKb5bWE7zffdS03vdHlg==", null, false, "af8f04dd-fb32-432e-87a5-3de88e5ec736", false, "jacek" }
+                    { "47324e96-2da2-4003-86d2-14082b81b558", 0, "3f588fe8-c0b0-4034-aeeb-36083a8f9548", "jacek@gmail.com", true, false, null, "JACEK@GMAIL.COM", "JACEK", "AQAAAAIAAYagAAAAEL5NTDs8odReGTIN1Ij70XZbkmNrSy1VCXpWyCU+2YTJ9Xl50miDlGdHP6ELTfh62w==", null, false, "4d09830e-dd14-4077-b8b4-3ea5262adb05", false, "jacek" },
+                    { "9561df8e-8a3a-4200-bae6-c81bb72621e8", 0, "3c31851b-3b88-4162-a00b-b232c31c5021", "tomek@gmail.com", true, false, null, "TOMEK@GMAIL.COM", "TOMEK", "AQAAAAIAAYagAAAAEPS0I60aWwb+vluSDYbjuq5jWdUAPb5YGuErNU0lUlbgPpbzsMkibO8lrsaBh5x6Jg==", null, false, "b3ed418a-b123-47c3-9d07-723698cb22e3", false, "tomek" }
                 });
 
             migrationBuilder.InsertData(
@@ -215,14 +215,14 @@ namespace Data.Migrations
                 columns: new[] { "Id", "Description", "Name" },
                 values: new object[,]
                 {
-                    { 1, "wsei krakow", "WSEI" },
-                    { 2, "agh krakow", "AGH" }
+                    { 1, "piłka nożna", "Sport" },
+                    { 2, "sdasdasd", "Wiadomości" }
                 });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
                 columns: new[] { "RoleId", "UserId" },
-                values: new object[] { "c9a79090-295f-4303-bf34-48f1f5846f1f", "4318cab1-bd2b-430f-b2f3-c7532525ecd9" });
+                values: new object[] { "d729e2e4-8ece-4504-8e29-51e24bc4a883", "47324e96-2da2-4003-86d2-14082b81b558" });
 
             migrationBuilder.InsertData(
                 table: "Posts",

@@ -1,5 +1,32 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model Post
+
+<div class="container mt-5">
+    <h2>Post Details</h2>
+    <dl class="row">
+        <dt class="col-sm-2">Content:</dt>
+        <dd class="col-sm-10">@Model.Content</dd>
+
+        <dt class="col-sm-2">Author:</dt>
+        <dd class="col-sm-10">@Model.Author</dd>
+
+        <dt class="col-sm-2">Publish Date:</dt>
+        <dd class="col-sm-10">@Model.publishDate.ToString("yyyy-MM-dd")</dd>
+
+        <dt class="col-sm-2">Tags:</dt>
+        <dd class="col-sm-10">@Model.Tags</dd>
+
+        <dt class="col-sm-2">Comment:</dt>
+        <dd class="col-sm-10">@Model.Comment</dd>
+
+        <dt class="col-sm-2">Topic:</dt>
+        <div class="mb-3">
+
+            <select disabled class="form-control" asp-for="TopicId" asp-items=@Model.Topics></select>
+        </div>
+    </dl>
+
+    <div class="mt-3">
+        <a asp-controller="Post" asp-action="Update" asp-route-id="@Model.Id">Update</a> |
+        <a asp-controller="Post" asp-action="Index">Back to List</a>
+    </div>
+</div>
