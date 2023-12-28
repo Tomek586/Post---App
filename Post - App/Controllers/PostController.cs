@@ -17,11 +17,21 @@ namespace Post___App.Controllers
         {
             _postService = postService;
         }
-        
-        public IActionResult Index()
+
+        public IActionResult Index(int? topicId)
         {
-            var x = _postService.FindAll();
-            return View(x);
+            // Pobierz dostępne tematy z bazy danych
+            ViewBag.AllTopics = _postService.FindAllTopics();
+
+            // Pobierz posty z uwzględnieniem filtra tematu
+            var posts = _postService.FindAll();
+
+            if (topicId.HasValue && topicId > 0)
+            {
+                posts = posts.Where(p => p.TopicId == topicId.Value).ToList();
+            }
+
+            return View(posts);
         }
 
         [HttpGet]
