@@ -1,27 +1,71 @@
-﻿@model List<Post>
-@{
-    ViewData["Title"] = "Posts";
+﻿@{
+    Layout = null;
 }
 
-<div class="container mt-5">
-    <h2>Posts</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Posts</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+       
+        body {
+            padding-top: 60px; 
+        }
 
-    <form asp-controller="Post" asp-action="Index" method="get">
-        <div class="form-group">
-            <label for="topicFilter">Filter by Topic:</label>
-            <select class="form-control" id="topicFilter" name="topicId">
-                <option value="">All Topics</option>
-                @foreach (var topic in ViewBag.AllTopics)
-                {
-                    <option value="@topic.Id">@topic.Name</option>
-                }
-            </select>
+        .navbar {
+            margin-bottom: 0;
+        }
+
+        #topicFilter {
+            width: 150px; 
+            margin-right: 10px; 
+        }
+
+        .card-deck {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="@Url.Action("Index", "Home")">My Blog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="@Url.Action("Index", "Home")">
+                        Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <button type="submit" class="btn btn-primary">Apply Filter</button>
-    </form>
+    </nav>
 
-    <div class="card-deck">
-            <!-- Dynamicznie generuj karty postów na podstawie danych z modelu -->
+    <div class="container mt-5">
+        <h2>Posts</h2>
+
+        <form asp-controller="Post" asp-action="Index" method="get" class="form-inline">
+            <div class="form-group">
+                <label for="topicFilter" class="mr-2">Filter by Topic:</label>
+                <select class="form-control" id="topicFilter" name="topicId">
+                    <option value="">All Topics</option>
+                    @foreach (var topic in ViewBag.AllTopics)
+                    {
+                        <option value="@topic.Id">@topic.Name</option>
+                    }
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Apply Filter</button>
+        </form>
+
+        <div class="card-deck">
+          
             @foreach (var post in Model)
             {
                 <div class="card">
@@ -31,23 +75,22 @@
                         <p class="card-text"><small class="text-muted">Publish Date: @post.publishDate</small></p>
                         <p class="card-text"><small class="text-muted">Tags: @post.Tags</small></p>
                         <p class="card-text"><small class="text-muted">Comment: @post.Comment</small></p>
-                     
 
-                        <!-- Przyciski akcji -->
+                      
                         <a class="btn btn-primary" href="@Url.Action("Details", "Post", new { id = post.Id })">Details</a>
                         <a class="btn btn-primary"
                            asp-action="Update"
                            asp-controller="Post"
                            asp-route-id=@post.Id>Edytuj</a>
                         <a class="btn btn-danger" href="@Url.Action("Delete", "Post", new { id = post.Id })">Delete</a>
-                        <a class="btn btn-info" href="@Url.Action("AddComment", "Post", new { postId = post.Id })">Dodaj komentarz</a>
+                   
                     </div>
                 </div>
             }
         </div>
     </div>
+    </body>
+    </html>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+   
