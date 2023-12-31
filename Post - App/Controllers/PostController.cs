@@ -5,7 +5,7 @@ using Post___App.Models;
 
 namespace Post___App.Controllers
 {
-    
+   
     public class PostController : Controller
     {
         static List<Post> _post = new List<Post>();
@@ -17,7 +17,7 @@ namespace Post___App.Controllers
         {
             _postService = postService;
         }
-
+      
         public IActionResult Index(int? topicId)
         {
           
@@ -35,6 +35,7 @@ namespace Post___App.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "admin")]
         public ActionResult Create()
         {
             Post model = new Post();
@@ -46,6 +47,7 @@ namespace Post___App.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public IActionResult Create(Post model)
         {
             if (ModelState.IsValid)
@@ -60,6 +62,7 @@ namespace Post___App.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "admin")]
         public IActionResult Update(int id)
         {
             var contact = _postService.FindById(id);
@@ -82,6 +85,7 @@ namespace Post___App.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public IActionResult Update(Post model)
         {
             if (ModelState.IsValid)
@@ -119,6 +123,7 @@ namespace Post___App.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "admin")]
         public IActionResult Delete(int id)
         {
             var contact = _postService.FindById(id);
