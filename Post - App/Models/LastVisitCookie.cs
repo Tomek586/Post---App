@@ -1,5 +1,6 @@
 ﻿namespace Post___App.Models
 {
+
     public class LastVisitCookie
     {
         private readonly RequestDelegate _next;
