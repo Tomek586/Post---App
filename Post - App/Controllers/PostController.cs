@@ -20,10 +20,10 @@ namespace Post___App.Controllers
 
         public IActionResult Index(int? topicId)
         {
-            // Pobierz dostępne tematy z bazy danych
+          
             ViewBag.AllTopics = _postService.FindAllTopics();
 
-            // Pobierz posty z uwzględnieniem filtra tematu
+      
             var posts = _postService.FindAll();
 
             if (topicId.HasValue && topicId > 0)
@@ -147,11 +147,15 @@ namespace Post___App.Controllers
             }
             return View(model);
         }
-        //public IActionResult PagedIndex(int? page = 1, int? size = 2)
-        //{
+        public IActionResult PagedIndex(int? page = 1, int? size = 2)
+        {
 
-        //    return View(_postService.FindPage((int)page, (int)size));
-        //}
+            return View(_postService.FindPage((int)page, (int)size));
+        }
+
+       
+
+
 
     }
 }

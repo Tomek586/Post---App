@@ -38,7 +38,7 @@ namespace Post___App
             app.UseStaticFiles();
 
             app.UseRouting();
-            //app.UseMiddleware<LastVisitCookie>();
+            app.UseMiddleware<LastVisitCookie>();
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseSession();

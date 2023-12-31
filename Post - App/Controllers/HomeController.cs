@@ -7,15 +7,22 @@ namespace Post___App.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IPostService _postService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IPostService postService)
         {
             _logger = logger;
+            _postService = postService;
         }
 
         public IActionResult Index()
         {
-            return View();
+            // Pobierz post o ID = 1
+            int postIdToDisplay = 1;
+            var postToDisplay = _postService.FindById(postIdToDisplay);
+
+            // Przekaz post do widoku
+            return View(postToDisplay);
         }
 
         public IActionResult Privacy()

@@ -1,8 +1,31 @@
-﻿@{
+﻿@model Post
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Witaj!</h1>
+    
+</div>
+
+<div class="container mt-5">
+    <h2>Mój pierwszy wpis:</h2>
+
+    @if (Model != null)
+    {
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text">@Model.Content</p>
+                <p class="card-text"><small class="text-muted">Author: @Model.Author </small></p>
+                <p class="card-text"><small class="text-muted">Publish Date: @Model.publishDate</small></p>
+                <p class="card-text"><small class="text-muted">Tags: @Model.Tags</small></p>
+                <p class="card-text"><small class="text-muted">Comment: @Model.Comment</small></p>
+            </div>
+        </div>
+    }
+    else
+    {
+        <p>Nie znaleziono wpisu</p>
+    }
 </div>

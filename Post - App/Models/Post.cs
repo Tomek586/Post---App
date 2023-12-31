@@ -19,5 +19,10 @@ namespace Post___App.Models
 
         [ValidateNever]
         public List<SelectListItem> Topics { get; set; }
+
+        internal object OrderByDescending(Func<object, object> value)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
