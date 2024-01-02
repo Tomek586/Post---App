@@ -18,11 +18,11 @@ namespace Post___App.Controllers
         public IActionResult Index()
         {
             ViewData["Visit"] = Response.HttpContext.Items[LastVisitCookie.CookieName];
-            // Pobierz post o ID = 1
+            
             int postIdToDisplay = 1;
             var postToDisplay = _postService.FindById(postIdToDisplay);
 
-            // Przekaz post do widoku
+            
             return View(postToDisplay);
         }
 

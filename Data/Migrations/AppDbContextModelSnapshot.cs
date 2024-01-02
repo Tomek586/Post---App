@@ -55,10 +55,10 @@ namespace Data.Migrations
                         new
                         {
                             PostId = 1,
-                            Author = "gawor",
+                            Author = "Tom",
                             Comment = "komentarz",
-                            Content = "XDDD",
-                            Tags = "xd",
+                            Content = "Sensacyjne zwycięstwo Liverpoolu 4-2 nad rywalem!",
+                            Tags = "piłka nożna, Premier League, zwycięstwo, emocje",
                             TopicId = 1,
                             publishDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
@@ -67,9 +67,9 @@ namespace Data.Migrations
                             PostId = 2,
                             Author = "janusz",
                             Comment = "komentarz2",
-                            Content = "adsadsa",
-                            Tags = "beka",
-                            TopicId = 1,
+                            Content = "Rewolucje w branży technologicznej kształtują przyszłość biznesu.",
+                            Tags = "technologia, innowacje, biznes",
+                            TopicId = 2,
                             publishDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
@@ -102,7 +102,13 @@ namespace Data.Migrations
                         new
                         {
                             Id = 2,
-                            Description = "sdasdasd",
+                            Description = "giełda ...",
+                            Name = "Bizes"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "wiadomości z całego świata",
                             Name = "Wiadomości"
                         });
                 });
@@ -135,8 +141,8 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "d729e2e4-8ece-4504-8e29-51e24bc4a883",
-                            ConcurrencyStamp = "d729e2e4-8ece-4504-8e29-51e24bc4a883",
+                            Id = "348f4385-0646-4050-b4b7-22b14efb218e",
+                            ConcurrencyStamp = "348f4385-0646-4050-b4b7-22b14efb218e",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         });
@@ -231,33 +237,33 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "9561df8e-8a3a-4200-bae6-c81bb72621e8",
+                            Id = "ea6376dd-0de0-428f-b204-4fc8fb621d6c",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "3c31851b-3b88-4162-a00b-b232c31c5021",
+                            ConcurrencyStamp = "4ab68d26-f7c8-4cac-949a-d6127cf208e4",
                             Email = "tomek@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "TOMEK@GMAIL.COM",
                             NormalizedUserName = "TOMEK",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPS0I60aWwb+vluSDYbjuq5jWdUAPb5YGuErNU0lUlbgPpbzsMkibO8lrsaBh5x6Jg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJ452vW4g/8JRkC+06eNXrLrXv5aTIXZk+Vw7DyT3qiP68y7Fs92am/roc/yYNbmdg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "b3ed418a-b123-47c3-9d07-723698cb22e3",
+                            SecurityStamp = "5e91fe93-d9d7-458e-bae7-0a30194d0fd2",
                             TwoFactorEnabled = false,
                             UserName = "tomek"
                         },
                         new
                         {
-                            Id = "47324e96-2da2-4003-86d2-14082b81b558",
+                            Id = "41b03281-877c-4f07-a687-cc915bd57376",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "3f588fe8-c0b0-4034-aeeb-36083a8f9548",
+                            ConcurrencyStamp = "63c6baf7-b6ff-47be-8cfd-92a32bd139cf",
                             Email = "jacek@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "JACEK@GMAIL.COM",
                             NormalizedUserName = "JACEK",
-                            PasswordHash = "AQAAAAIAAYagAAAAEL5NTDs8odReGTIN1Ij70XZbkmNrSy1VCXpWyCU+2YTJ9Xl50miDlGdHP6ELTfh62w==",
+                            PasswordHash = "AQAAAAIAAYagAAAAECIjIX63lKSJc8AXrBHoMJ+GvAcTJwWdmoqVD37M+W5YreBSwFQ1NodbzQLn3z4ICw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "4d09830e-dd14-4077-b8b4-3ea5262adb05",
+                            SecurityStamp = "6d6b7fe8-3ab4-498d-8788-85574c4dcb39",
                             TwoFactorEnabled = false,
                             UserName = "jacek"
                         });
@@ -325,8 +331,8 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "47324e96-2da2-4003-86d2-14082b81b558",
-                            RoleId = "d729e2e4-8ece-4504-8e29-51e24bc4a883"
+                            UserId = "41b03281-877c-4f07-a687-cc915bd57376",
+                            RoleId = "348f4385-0646-4050-b4b7-22b14efb218e"
                         });
                 });
 

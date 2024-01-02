@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Data.Migrations
 {
     /// <inheritdoc />
-    public partial class test1 : Migration
+    public partial class test24 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -199,15 +199,15 @@ namespace Data.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "d729e2e4-8ece-4504-8e29-51e24bc4a883", "d729e2e4-8ece-4504-8e29-51e24bc4a883", "admin", "ADMIN" });
+                values: new object[] { "348f4385-0646-4050-b4b7-22b14efb218e", "348f4385-0646-4050-b4b7-22b14efb218e", "admin", "ADMIN" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "47324e96-2da2-4003-86d2-14082b81b558", 0, "3f588fe8-c0b0-4034-aeeb-36083a8f9548", "jacek@gmail.com", true, false, null, "JACEK@GMAIL.COM", "JACEK", "AQAAAAIAAYagAAAAEL5NTDs8odReGTIN1Ij70XZbkmNrSy1VCXpWyCU+2YTJ9Xl50miDlGdHP6ELTfh62w==", null, false, "4d09830e-dd14-4077-b8b4-3ea5262adb05", false, "jacek" },
-                    { "9561df8e-8a3a-4200-bae6-c81bb72621e8", 0, "3c31851b-3b88-4162-a00b-b232c31c5021", "tomek@gmail.com", true, false, null, "TOMEK@GMAIL.COM", "TOMEK", "AQAAAAIAAYagAAAAEPS0I60aWwb+vluSDYbjuq5jWdUAPb5YGuErNU0lUlbgPpbzsMkibO8lrsaBh5x6Jg==", null, false, "b3ed418a-b123-47c3-9d07-723698cb22e3", false, "tomek" }
+                    { "41b03281-877c-4f07-a687-cc915bd57376", 0, "63c6baf7-b6ff-47be-8cfd-92a32bd139cf", "jacek@gmail.com", true, false, null, "JACEK@GMAIL.COM", "JACEK", "AQAAAAIAAYagAAAAECIjIX63lKSJc8AXrBHoMJ+GvAcTJwWdmoqVD37M+W5YreBSwFQ1NodbzQLn3z4ICw==", null, false, "6d6b7fe8-3ab4-498d-8788-85574c4dcb39", false, "jacek" },
+                    { "ea6376dd-0de0-428f-b204-4fc8fb621d6c", 0, "4ab68d26-f7c8-4cac-949a-d6127cf208e4", "tomek@gmail.com", true, false, null, "TOMEK@GMAIL.COM", "TOMEK", "AQAAAAIAAYagAAAAEJ452vW4g/8JRkC+06eNXrLrXv5aTIXZk+Vw7DyT3qiP68y7Fs92am/roc/yYNbmdg==", null, false, "5e91fe93-d9d7-458e-bae7-0a30194d0fd2", false, "tomek" }
                 });
 
             migrationBuilder.InsertData(
@@ -216,21 +216,22 @@ namespace Data.Migrations
                 values: new object[,]
                 {
                     { 1, "piłka nożna", "Sport" },
-                    { 2, "sdasdasd", "Wiadomości" }
+                    { 2, "giełda ...", "Bizes" },
+                    { 3, "wiadomości z całego świata", "Wiadomości" }
                 });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
                 columns: new[] { "RoleId", "UserId" },
-                values: new object[] { "d729e2e4-8ece-4504-8e29-51e24bc4a883", "47324e96-2da2-4003-86d2-14082b81b558" });
+                values: new object[] { "348f4385-0646-4050-b4b7-22b14efb218e", "41b03281-877c-4f07-a687-cc915bd57376" });
 
             migrationBuilder.InsertData(
                 table: "Posts",
                 columns: new[] { "PostId", "Author", "Comment", "Content", "Tags", "TopicId", "publishDate" },
                 values: new object[,]
                 {
-                    { 1, "gawor", "komentarz", "XDDD", "xd", 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 2, "janusz", "komentarz2", "adsadsa", "beka", 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
+                    { 1, "Tom", "komentarz", "Sensacyjne zwycięstwo Liverpoolu 4-2 nad rywalem!", "piłka nożna, Premier League, zwycięstwo, emocje", 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 2, "janusz", "komentarz2", "Rewolucje w branży technologicznej kształtują przyszłość biznesu.", "technologia, innowacje, biznes", 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
                 });
 
             migrationBuilder.CreateIndex(

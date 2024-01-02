@@ -41,8 +41,9 @@ namespace Post___App.Controllers
             Post model = new Post();
             model.Topics = _postService
                 .FindAllTopics()
-                .Select(o => new SelectListItem() { Value = o.Id.ToString(), Text = o.Name })
-                .ToList();
+                ?.Select(o => new SelectListItem() { Value = o.Id.ToString(), Text = o.Name })
+                .ToList() ?? new List<SelectListItem>();
+
             return View(model);
         }
 
@@ -67,20 +68,20 @@ namespace Post___App.Controllers
         {
             var contact = _postService.FindById(id);
 
-            contact.Topics = _postService
-                .FindAllTopics()
-                .Select(oe => new Microsoft.AspNetCore.Mvc.Rendering.SelectListItem()
-                {
-                    Text = oe.Name,
-                    Value = oe.Id.ToString(),
-
-                }
-                ).ToList();
-
             if (contact != null)
             {
+                contact.Topics = _postService
+                    .FindAllTopics()
+                    ?.Select(oe => new SelectListItem()
+                    {
+                        Text = oe.Name,
+                        Value = oe.Id.ToString(),
+                    })
+                    .ToList() ?? new List<SelectListItem>();
+
                 return View(contact);
             }
+
             return RedirectToAction("Index");
         }
 
@@ -102,23 +103,22 @@ namespace Post___App.Controllers
         [HttpGet]
         public IActionResult Details(int id)
         {
-
             var contact = _postService.FindById(id);
-
-            contact.Topics = _postService
-                .FindAllTopics()
-                .Select(oe => new Microsoft.AspNetCore.Mvc.Rendering.SelectListItem()
-                {
-                    Text = oe.Name,
-                    Value = oe.Id.ToString(),
-
-                }
-                ).ToList();
 
             if (contact != null)
             {
+                contact.Topics = _postService
+                    .FindAllTopics()
+                    .Select(oe => new SelectListItem()
+                    {
+                        Text = oe.Name,
+                        Value = oe.Id.ToString(),
+                    })
+                    .ToList();
+
                 return View(contact);
             }
+
             return View(contact);
         }
 

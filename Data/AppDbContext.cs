@@ -102,11 +102,19 @@ namespace Data
 
 
                  },
+                  new TopicEntity()
+                  {
+                      Id = 2,
+                      Name = "Bizes",
+                      Description = "giełda ...",
+
+
+                  },
                  new TopicEntity()
                  {
-                     Id = 2,
+                     Id = 3,
                      Name = "Wiadomości",
-                     Description = "sdasdasd",
+                     Description = "wiadomości z całego świata",
 
 
                  }
@@ -115,9 +123,9 @@ namespace Data
                new PostEntity()
                {
                    PostId = 1,
-                   Content = "XDDD",
-                   Author = "gawor",
-                   Tags = "xd",
+                   Content = "Sensacyjne zwycięstwo Liverpoolu 4-2 nad rywalem!",
+                   Author = "Tom",
+                   Tags = "piłka nożna, Premier League, zwycięstwo, emocje",
                    Comment = "komentarz",
                    TopicId = 1,
 
@@ -125,11 +133,11 @@ namespace Data
                new PostEntity()
                {
                    PostId = 2,
-                   Content = "adsadsa",
+                   Content = "Rewolucje w branży technologicznej kształtują przyszłość biznesu.",
                    Author = "janusz",
-                   Tags = "beka",
+                   Tags = "technologia, innowacje, biznes",
                    Comment = "komentarz2",
-                   TopicId = 1,
+                   TopicId = 2,
                }
            );
     
